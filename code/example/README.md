@@ -20,7 +20,7 @@ https://karpathy.medium.com/yes-you-should-understand-backprop-e2f06eab496b
 Getting started on graph neural networks:
 https://distill.pub/2021/gnn-intro/
 
-Torch geometric:
+Torch geometric, has information on different layertypes etc:
 
 https://pytorch-geometric.readthedocs.io/en/latest/
 
