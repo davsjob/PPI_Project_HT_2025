@@ -32,6 +32,10 @@ https://biopython.org/docs/latest/Tutorial/chapter_pdb.html
 
 ## Things to consider when training networks
 - What does our training, validation and test data look like? 
+
+- How are we representing the PPIs? Strings to vectors? Graphs? Structure or sequence based? Both?
+What are the features? 
+
 - Are the distributions similar, is there leakage between the datasets?
 
 - Loss function: How is the network learning "right" and "wrong"
