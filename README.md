@@ -9,7 +9,7 @@
 ## Short Description
 Protein-protein interactions (PPIs) are at the very core of many biological processes such as signal transduction, metabolic regulation and enzymatic complexes.
 
-Accurately predicting the strength of such interactions is a problem that has been under investigation for a long time (REF Janin 1975, Lewis 1992) with various approaches. 
+Accurately predicting the strength of such interactions is a problem that has been under investigation for a long time (Janin 1975, Lewis 1992) with various computational and statistical approaches. 
 Understanding the effect of point mutations on binding affinity could elucidate the targets for drug discovery and disease modeling. 
 
 ## Course Aim
@@ -23,6 +23,22 @@ Understanding the effect of point mutations on binding affinity could elucidate 
 The aim of this project is to develop machine learning approaches for PPI affinity predicition. 
 This is an *open-ended* and *student-driven* project, your interests will influence the outcome and direction of this project. 
 
+My idea for this project is to use graph neural networks for this task, but this is only an idea and if you have some other clever idea feel free to discuss it with me! 
+
+In general for all neural network models we need:
+
+Data : found in `/data` you have the actual PPB-Affinity excel sheet which we could use. 
+
+A model: 
+How many/which kind of layers, nodes and parameters should we use?
+Here we could try different approaches. The network also depend on how you define the input data. 
+
+Are we using the sequences?
+
+Are we using the 3D structure to construct graphs? 
+
+Some metric of how we define success: i.e what is the network trying to do. This will also affect our loss function, which tells the network how "wrong" it is during training. Examples: MSELoss for regresssion, BCE for binary classification.
+
 ### Ingredients for a well structured Project Plan
 
 * Course Requirements 
@@ -35,7 +51,7 @@ Some suggested articles can be found in the `/lit` folder.
 
 Brief overview of suggested articles can be found below:
 
-contact_based_PPI.pdf - Bonvin 2015, predicting PPI strength using contact types (polar/apolar) (charged/polar) and is in essence highligting that structural features are important. The 
+contact_based_PPI.pdf - Bonvin 2015, predicting PPI strength using contact types (polar/apolar) (charged/polar) and is in essence highligting that structural features are important. 
 
 ESM2 - A protein language model that can predict protein structure. Transformer style model (i.e ChatGPT similar). The interesting part (not mentioned in the paper)
 is that the embeddings are information dense and can be used for more than predicting structure. 
@@ -55,6 +71,7 @@ ProTrans - Protein language model. In my short empirical testing this has had mo
 Pytia-PPI - multitask learning and self-distillation, KNN GNN model with geometrical features
 
 SKEMPI V2 - Benchmark dataset of protein protein binding upon mutations 
+
 ### Code
 In `/code/example` is example code to help you get started on machine learning and neural networks
 
